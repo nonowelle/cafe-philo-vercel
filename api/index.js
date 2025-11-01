@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import path from "path";
 
 dotenv.config();
 
@@ -11,12 +10,14 @@ const app = express();
 app.use(express.json());
 
 // --- CORS ---
-// Si frontend et backend sont sur le même domaine, tu peux commenter cors
+// Vercel gère les domaines, mais tu peux restreindre si besoin :
 const allowedOrigins = (process.env.ALLOWED_ORIGIN || 'http://localhost:5173')
   .split(',')
   .map(o => o.trim());
 
-app.use(cors());
+app.use(cors({
+  origin: allowedOrigins,
+}));
 
 // --- Form endpoint ---
 app.post("/form", async (req, res) => {
@@ -45,15 +46,5 @@ app.post("/form", async (req, res) => {
   }
 });
 
-// --- Serve frontend static files ---
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'dist')));
-
-// --- SPA routing fallback ---
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-
-// --- Start server ---
-const port = Number(process.env.PORT) || 3000;
-app.listen(port, () => console.log(`✅ Serveur en ligne sur le port ${port}`));
+// --- Export Express app comme fonction serverless ---
+export default app;
