@@ -20,7 +20,7 @@ app.use(cors({
 }));
 
 // --- Form endpoint ---
-app.post("/form", async (req, res) => {
+app.post("/api/form", async (req, res) => {
   try {
     console.log("Form reçu :", req.body);
 
