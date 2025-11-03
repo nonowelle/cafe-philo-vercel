@@ -14,6 +14,10 @@ export default defineConfig(async () => {
 
   return {
     plugins,
+    build: {
+      outDir: 'dist',      // dossier final pour Vercel
+      emptyOutDir: true
+    },
     server: {
       proxy: {
         '/api/form': 'http://localhost:3000'
