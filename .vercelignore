@@ -1,0 +1,7 @@
+# Ignore root-level files that might confuse Vercel
+index.html
+tsconfig*.json
+env.d.ts
+eslint.config.ts
+dist/
+
