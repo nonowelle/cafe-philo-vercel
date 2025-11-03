@@ -13,6 +13,7 @@ export default defineConfig(async () => {
   }
 
   return {
+    root: fileURLToPath(new URL('.', import.meta.url)),
     plugins,
     build: {
       outDir: 'dist',      // dossier final pour Vercel
