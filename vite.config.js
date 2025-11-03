@@ -16,7 +16,7 @@ export default defineConfig(async () => {
     plugins,
     server: {
       proxy: {
-        '/form': 'http://localhost:3000'
+        '/api/form': 'http://localhost:3000'
       },
     },
     resolve: {
