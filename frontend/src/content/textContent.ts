@@ -62,7 +62,7 @@ export const textContent = {
       {
         sectionId: "1",
         title: "¿qué?",
-        subtitle: "filosofía pero la divertida",
+        subtitle: "",
         description: "caféphilo es un espacio de encuentro para conversar, reflexionar y compartir, donde la filosofía se conecta con la cultura y la vida cotidiana.\n\n",
         descriptionDeux: "el concepto se inspira en los café philo franceses, creados en los años 90, que convirtieron a los cafés en escenarios de debate abierto y accesible.\n\nTraemos esa tradición a Madrid, en colaboración con la <a href=\"https://www.laacademiaarteyciencia.com/\">academia de arte y ciencia</a>.\n"
       },
