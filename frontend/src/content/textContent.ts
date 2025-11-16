@@ -13,7 +13,7 @@ export const textContent = {
         title: "how?",
         subtitle: "",
         description: "during 90 minutes, a philosopher-mediator takes you through the meanders of thought, based on a film, literature, or any existential or philosophical current topic.",
-        descriptionDeux: ""
+       
       },
       {
         sectionId: "3",
