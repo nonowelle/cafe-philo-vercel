@@ -1,0 +1,23 @@
+{
+  "name": "cafe-philo-vercel",
+  "version": "1.0.0",
+  "description": "Environment variables:",
+  "homepage": "https://github.com/nonowelle/cafe-philo-vercel#readme",
+  "bugs": {
+    "url": "https://github.com/nonowelle/cafe-philo-vercel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonowelle/cafe-philo-vercel.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.4"
+  }
+}
